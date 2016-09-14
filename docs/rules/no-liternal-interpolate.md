@@ -11,7 +11,7 @@ The following patterns are considered warnings:
 
 ```js
 
-`I18n.interpolate('Some string %(foo)s', {foo: 'bar'});`
+I18n.interpolate('Some string %(foo)s', {foo: 'bar'});
 
 ```
 
@@ -20,6 +20,6 @@ The following patterns are not warnings:
 ```js
 
 var someString = I18n.gettext('Some string %(foo)s');
-`I18n.interpolate(someString, {foo: 'bar'});`
+I18n.interpolate(someString, {foo: 'bar'});
 
 ```
