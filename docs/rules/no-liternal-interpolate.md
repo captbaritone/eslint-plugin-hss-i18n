@@ -1,17 +1,17 @@
 # Prevent calling interpolate on string literals (no-liternal-interpolate)
 
-Please describe the origin of the rule here.
-
+`I18n.interpolate()` by itself does not actually translate a string. However
+many people mistakenly think that it does. This rule prevents you from calling
+`interpolate` on a literal string. You should instead pass `interpolate`
+a string that has already been translated by `I18n.gettext`.
 
 ## Rule Details
-
-This rule aims to...
 
 The following patterns are considered warnings:
 
 ```js
 
-// fill me in
+`I18n.interpolate('Some string %(foo)s', {foo: 'bar'});`
 
 ```
 
@@ -19,18 +19,7 @@ The following patterns are not warnings:
 
 ```js
 
-// fill me in
+var someString = I18n.gettext('Some string %(foo)s');
+`I18n.interpolate(someString, {foo: 'bar'});`
 
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
