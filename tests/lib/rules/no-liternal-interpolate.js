@@ -22,6 +22,7 @@ ruleTester.run("no-interpolate-literal", rule, {
 
     valid: [
         "I18n.interpolate(someVar);",
+        "I18n.interpolate([someVar, someOtherVar].join(' '));",
         "otherObject.interpolate('foo');",
         "I18n.gettext('Hello Jordan');"
     ],
@@ -40,6 +41,13 @@ ruleTester.run("no-interpolate-literal", rule, {
                 message: "Avoid calling interpolate on untranslated literal strings.",
                 type: "Literal"
             }]
-        }
+        },
+        {
+            code: "I18n.interpolate('Hello ' + '%(name)s', {name: 'Jordan'});",
+            errors: [{
+                message: "Avoid calling interpolate on untranslated literal strings.",
+                type: "BinaryExpression"
+            }]
+        },
     ]
 });
