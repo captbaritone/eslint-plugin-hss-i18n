@@ -36,14 +36,18 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "hss-i18n/no-interpolate-literal": "error"
+        "hss-i18n/no-interpolate-literal": "error",
+        "hss-i18n/require-gettext-literal": "error"
     }
 }
 ```
 
 ## Supported Rules
 
-* `hss-i18n/no-interpolate-literal`: Prevent calling I1in.interpolate on untranslated string literals
+* [`hss-i18n/no-interpolate-literal`](docs/rules/no-interpolate-litera.md):
+  Prevent calling I18n.interpolate on untranslated string literals
+* [`hss-i18n/require-gettext-literal`](docs/rules/require-gettext-literal.ms):
+  Prevent calling I18n.gettext with anything other than a literal string.
 
 
 

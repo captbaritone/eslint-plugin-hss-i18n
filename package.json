@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-hss-i18n",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Detect common errors when using I18n",
   "keywords": [
     "eslint",
