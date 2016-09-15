@@ -15,7 +15,7 @@ The following patterns are considered warnings:
 ```js
 
 var helloWorld = 'Hello World';
-i18n.gettext(helloWorld);
+I18n.gettext(helloWorld);
 
 ```
 
@@ -23,8 +23,8 @@ The following patterns are not warnings:
 
 ```js
 
-i18n.gettext('Hello World');
+I18n.gettext('Hello World');
 
-i18n.gettext('Hello ' + 'World');
+I18n.gettext('Hello ' + 'World');
 
 ```
