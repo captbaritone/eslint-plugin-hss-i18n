@@ -1,4 +1,4 @@
-# Prevent calling I18n.gettext with anything other than a literal string. (gettext-literal)
+# Prevent calling I18n.gettext with anything other than a literal string. (require-gettext-literal)
 
 Our translation setup depends upon our ability to extract translatable strings
 from our code base. If the string you wish to translate is defined outside of
