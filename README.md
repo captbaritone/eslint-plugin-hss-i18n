@@ -47,9 +47,10 @@ Then configure the rules you want to use under the rules section.
 * [`hss-i18n/no-interpolate-literal`](docs/rules/no-interpolate-litera.md):
   Prevent calling I18n.interpolate on untranslated string literals
 * [`hss-i18n/require-gettext-literal`](docs/rules/require-gettext-literal.ms):
-  Prevent calling I18n.gettext with anything other than a literal string.
+  Prevent calling I18n.gettext/I18n.ngettext with anything other than a literal string.
 
+## Changelog
 
+### 1.0.0
 
-
-
+Add ngettext to `hss-i18n/gettext-literal`.
