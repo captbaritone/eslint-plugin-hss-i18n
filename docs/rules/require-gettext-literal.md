@@ -2,8 +2,8 @@
 
 Our translation setup depends upon our ability to extract translatable strings
 from our code base. If the string you wish to translate is defined outside of
-the `gettext` call, our system will not pick up the string and it will not get
-translated
+the `gettext`/`ngettext` call, our system will not pick up the string and it
+will not get translated
 
 __Note:__ Our system can pick up concatenated strings, and this rule allows
 those.
@@ -16,6 +16,7 @@ The following patterns are considered warnings:
 
 var helloWorld = 'Hello World';
 I18n.gettext(helloWorld);
+I18n.ngettext('Hey you!', heyYall);
 
 ```
 
@@ -26,5 +27,7 @@ The following patterns are not warnings:
 I18n.gettext('Hello World');
 
 I18n.gettext('Hello ' + 'World');
+
+I18n.gettext('Hey you!', "Hey y'all!");
 
 ```
