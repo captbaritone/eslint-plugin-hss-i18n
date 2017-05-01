@@ -1,5 +1,7 @@
 # eslint-plugin-hss-i18n
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/captbaritone/eslint-plugin-hss-i18n.svg)](https://greenkeeper.io/)
+
 Detect common errors when using I18n at Hearsay Social
 
 ## Installation
